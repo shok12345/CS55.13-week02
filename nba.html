@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of few nba players</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!--  Note: we only need babel loaded in the browser if we are not using a build system  -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        
+        <h1>List of the best players in the NBA</h1>
+
+        <div id="myApp"></div>
+        <script data-type="module" data-presets="react" type="text/babel">
+            "use strict";
+
+            
+            import React from 'https://cdn.jsdelivr.net/npm/react@19.1.1/+esm';
+            
+            import { createRoot } from 'https://cdn.jsdelivr.net/npm/react-dom@19.1.1/client/+esm';
+
+            
+            function ProjectList(props) {
+                return  <div>
+                            <ul>
+                            {
+                                props.list.map(
+                                    (item,index) => (
+                                        <li key={index}>
+                                            <a href={item.link}>
+                                                {item.playername}
+                                            </a>
+                                        </li>
+                                    )
+                                )
+                            }
+                            </ul>
+                        </div>;
+            }
+            // getJSON 2 arguments: URL, a function that receives JSON
+            $.getJSON(
+                "nbaplayers.json",
+                function(jsonJquery) {
+                    console.log(jsonJquery);
+                    const myElement = document.getElementById('myApp');
+                    const myRoot = createRoot(myElement);
+                    myRoot.render(
+                        <ProjectList list={jsonJquery} />
+                    );
+                }
+            );
+        </script>
+    </body>
+</html>

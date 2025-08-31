@@ -1,0 +1,27 @@
+[
+    {
+        "playername":"Steph Curry",
+        "link":"https://en.wikipedia.org/wiki/Stephen_Curry"
+
+    },
+    {
+        "playername":"Lebron James",
+        "link":"https://en.wikipedia.org/wiki/LeBron_James"
+    },
+    {
+        "playername":"Kevin Durant",
+        "link":"https://en.wikipedia.org/wiki/Kevin_Durant"
+    },
+    {
+        "playername":"Nikola Jokić",
+        "link":"https://en.wikipedia.org/wiki/Nikola_Joki%C4%87"
+    },
+    {
+        "playername":"Shai Gilgeous-Alexander",
+        "link":"https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander"
+    },
+    {
+        "playername":"Giannis Antetokounmpo",
+        "link":"https://en.wikipedia.org/wiki/Giannis_Antetokounmpo"
+    }
+]
